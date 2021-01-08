@@ -32,16 +32,15 @@ function createListItem(id){
 	}
 }
 createListItem();
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
+
+/* making section in viewpos
 */
 
-function sectionInViewPort(m){
-	let sectionPos = elem.getBoundingClientRect();
+function sectionInViewport(){
+	let sectionPos = section.getBoundingClientRect(section);
 	return (sectionPos.top >= 0);
 }
+
 function toggleActiveClass(){
 	for (section of sections){
 		if (sectionInViewPort(section)){
@@ -53,7 +52,6 @@ function toggleActiveClass(){
 		}
 	}}
 }
-// build the nav
 
 document.addEventListener('scroll',toggleActiveClass)
 
